@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Data Updater With Permission</string>
+
+    <string name="permission_description">This a permission to allow other apps from our app suite to update data</string>
+
+</resources>

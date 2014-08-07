@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.epam.itweek.commonsensesecurity.downloader" >
+
+    <permission android:name="com.epam.itweek.commonsensesecurity.downloader.permission.UPDATE"
+        android:description="@string/permission_description"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="com.epam.itweek.commonsensesecurity.downloader.permission.UPDATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <service
+            android:permission="com.epam.itweek.commonsensesecurity.downloader.permission.UPDATE"
+            android:name=".UpdateDataIntentService" >
+            <intent-filter>
+                <action android:name="com.epam.itweek.commonsensesecurity.action.UPDATE_DATA" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
